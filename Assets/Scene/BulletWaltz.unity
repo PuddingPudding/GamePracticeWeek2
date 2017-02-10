@@ -251,6 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977223735}
   - component: {fileID: 977223734}
+  - component: {fileID: 977223736}
   m_Layer: 0
   m_Name: TurrentManager
   m_TagString: Untagged
@@ -289,3 +290,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977223736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977223733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2139483b2e37efb48957b69afbeda305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
