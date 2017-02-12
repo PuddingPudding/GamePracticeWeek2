@@ -21,13 +21,13 @@ public class TurrentManagerScript : MonoBehaviour
         _animator = this.GetComponent<Animator>();
     }
 
-    private void PlayShootAnimation()
+    public void PlayShootAnimation()
     {
         _animator.SetTrigger("Shoot");
         GameCamera.transform.DOShakePosition(CameraShakeDuration, CameraShakeStrength);  //再開砲後呼叫DOTween套件中的DOShakePosition，做出震盪效果
     }
 
-    private void PlayRotateAnimation()
+    public void PlayRotateAnimation()
     {
         float targetDegree = (360.0f / DirectionCount) * Random.Range(0, DirectionCount); //從8個方位中選出隨機的一個方位
         this.transform.DORotate(new Vector3(0, 0, targetDegree), rotateDuration); //選定角度(即方位)後，呼叫DOTween套件中的DoRotate方法進行旋轉

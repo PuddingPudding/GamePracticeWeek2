@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 977223735}
   - component: {fileID: 977223734}
   - component: {fileID: 977223736}
+  - component: {fileID: 977223737}
   m_Layer: 0
   m_Name: TurrentManager
   m_TagString: Untagged
@@ -415,3 +416,14 @@ MonoBehaviour:
   GameCamera: {fileID: 141180743}
   CameraShakeDuration: 0.3
   CameraShakeStrength: 0.05
+--- !u!114 &977223737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977223733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466226211c17241479f37ce1ab328923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
