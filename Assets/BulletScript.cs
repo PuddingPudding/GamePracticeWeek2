@@ -9,6 +9,8 @@ public class BulletScript : MonoBehaviour
 
     private float _speed = 2;
 
+    const float flashDuration = 0.1f; //閃爍間隔
+    float flashCounter = 0;
 
     public void InitAndShoot(Vector2 direction)
     {
@@ -39,5 +41,24 @@ public class BulletScript : MonoBehaviour
             //確保碰撞後速度不變
             _rigidbody2D.velocity = _rigidbody2D.velocity.normalized * _speed;
         }
+
+        float rotationZ = Mathf.Atan2(_rigidbody2D.velocity.y, _rigidbody2D.velocity.x) * Mathf.Rad2Deg;
+        //Atan2可取得 "幾弧度" ，算出tan(y/x)的弧度，Mathf.Rad2Deg可取得 1弧度 為幾度
+        Debug.Log(rotationZ);
+        this.transform.eulerAngles = new Vector3(0, 0, rotationZ);
+        if (flashCounter > 0)
+        {
+            flashCounter -= Time.deltaTime;
+            _spriteRenderer.color = Color.white;
+        }
+        else
+        {
+            _spriteRenderer.color = Color.green;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        flashCounter = flashDuration;
     }
 }
