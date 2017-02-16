@@ -9,6 +9,15 @@ public class PlayerControll : MonoBehaviour
     public float forceValue;
     public float maxSpeed;
     public float decreasingSpeed;
+
+    public ParticleSystem playerKillEffect;
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        this.gameObject.SetActive(false);
+        playerKillEffect.transform.position = this.transform.position;
+        playerKillEffect.gameObject.SetActive(true);
+    }
+
     // Use this for initialization
     void Start()
     {
