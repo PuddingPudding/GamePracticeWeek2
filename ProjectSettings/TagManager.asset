@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundUILayer
+    uniqueID: 2333784247
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -55,4 +58,7 @@ TagManager:
     locked: 0
   - name: Turret
     uniqueID: 1642509159
+    locked: 0
+  - name: ForewordUILayer
+    uniqueID: 427924087
     locked: 0

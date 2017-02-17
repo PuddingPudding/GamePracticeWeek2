@@ -18,6 +18,8 @@ public class TurrentManagerScript : MonoBehaviour
     public GameObject bulletCandidate;  //子彈物件
     private float bulletOffset = 0.6f;  //子彈射出來時跟炮管的起始距離
 
+    public ScoreManager scoreManager;
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +31,7 @@ public class TurrentManagerScript : MonoBehaviour
         _animator.SetTrigger("Shoot");
         GameCamera.transform.DOShakePosition(CameraShakeDuration, CameraShakeStrength);  //再開砲後呼叫DOTween套件中的DOShakePosition，做出震盪效果
 
+        scoreManager.AddScore(1);
         GameObject bulletobj = GameObject.Instantiate(bulletCandidate);
         BulletScript bulletScript = bulletobj.GetComponent<BulletScript>();
         bulletScript.transform.position = this.transform.position + bulletOffset * this.gameObject.transform.right;
