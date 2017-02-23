@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerControll : MonoBehaviour
 {
@@ -9,16 +10,24 @@ public class PlayerControll : MonoBehaviour
     public float forceValue;
     public float maxSpeed;
     public float decreasingSpeed;
+    public UnityEvent playerKilledEvent;
 
     public AudioSource playerKillSound;
 
     public ParticleSystem playerKillEffect;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         this.gameObject.SetActive(false);
         playerKillEffect.transform.position = this.transform.position;
         playerKillEffect.gameObject.SetActive(true);
         playerKillSound.Play();
+
+        if (playerKilledEvent != null)
+        {
+            playerKilledEvent.Invoke();
+        }
+
     }
 
     // Use this for initialization

@@ -29,7 +29,8 @@ public class TurrentManagerScript : MonoBehaviour
     public void PlayShootAnimation()
     {
         _animator.SetTrigger("Shoot");
-        GameCamera.transform.DOShakePosition(CameraShakeDuration, CameraShakeStrength);  //再開砲後呼叫DOTween套件中的DOShakePosition，做出震盪效果
+        GameCamera.transform.DOShakePosition(CameraShakeDuration, CameraShakeStrength);
+        //以上此行在開砲後呼叫DOTween套件中的DOShakePosition，做出震盪效果
 
         scoreManager.AddScore(1);
         GameObject bulletobj = GameObject.Instantiate(bulletCandidate);
