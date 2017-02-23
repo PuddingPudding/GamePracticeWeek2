@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 141180742}
   - component: {fileID: 141180741}
   - component: {fileID: 141180740}
+  - component: {fileID: 141180745}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -178,6 +179,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141180745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141180739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a8c8123a8558f48950d11bf2e466fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SCShader: {fileID: 4800000, guid: 5153304746adc8f42891808581e05f49, type: 3}
+  RotateValue: 0
 --- !u!1 &167924996
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117375c4ff1fedb46a42c0072b121807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmAudioSource: {fileID: 797632100}
+  hueRotate: {fileID: 141180745}
 --- !u!4 &973502321
 Transform:
   m_ObjectHideFlags: 0
@@ -3816,7 +3832,18 @@ MonoBehaviour:
   decreasingSpeed: 10
   playerKilledEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973502320}
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   playerKillSound: {fileID: 1800996608}

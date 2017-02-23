@@ -27,10 +27,10 @@ Material:
       second: 0
     - first:
         name: RepeatX
-      second: 146.4
+      second: 140
     - first:
         name: RepeatY
-      second: 82.4
+      second: 76
     m_Colors:
     - first:
         name: _Color

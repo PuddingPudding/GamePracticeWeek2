@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameLoopManager : MonoBehaviour
 {
-
     public AudioSource bgmAudioSource;
+    public HUE_Rotate hueRotate;
 
     public void GameOver()
     {
@@ -20,6 +20,8 @@ public class GameLoopManager : MonoBehaviour
         {
             bgmAudioSource.Stop();
         }).SetUpdate(true);
+
+        hueRotate.RotateValue = Mathf.PI;
     }
 
     // Use this for initialization
