@@ -880,6 +880,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 797632100}
   hueRotate: {fileID: 141180745}
+  scoreManager: {fileID: 1820859093}
+  bgmAudio: {fileID: 797632100}
+  bullets: []
+  playerController: {fileID: 1570600583}
+  followTheBeat: {fileID: 977223737}
 --- !u!4 &973502321
 Transform:
   m_ObjectHideFlags: 0
@@ -961,6 +966,7 @@ MonoBehaviour:
   bulletCandidate: {fileID: 1207328661114400, guid: e79dd0042143baa4eb167014a1a7f950,
     type: 2}
   scoreManager: {fileID: 1820859093}
+  gameLoopManager: {fileID: 973502320}
 --- !u!114 &977223737
 MonoBehaviour:
   m_ObjectHideFlags: 0
