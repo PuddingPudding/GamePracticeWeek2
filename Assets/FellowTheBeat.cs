@@ -13,6 +13,12 @@ public class FellowTheBeat : MonoBehaviour
 
     private TurrentManagerScript turret;
 
+    public void Reset()
+    {
+        shootCounter = -0.5f - beatPeriod * 3;
+        rotateCounter = 0.2f;
+    }
+
     // Use this for initialization
     void Start()
     {

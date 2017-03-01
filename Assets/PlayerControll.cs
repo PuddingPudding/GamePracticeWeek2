@@ -16,6 +16,14 @@ public class PlayerControll : MonoBehaviour
 
     public ParticleSystem playerKillEffect;
 
+    public void Reset()
+    {
+        this.transform.localPosition = new Vector3(2, 0, 0);
+        this.gameObject.SetActive(true);
+        playerKillEffect.Stop();
+        playerKillEffect.gameObject.SetActive(false);
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         this.gameObject.SetActive(false);

@@ -19,6 +19,7 @@ public class TurrentManagerScript : MonoBehaviour
     private float bulletOffset = 0.6f;  //子彈射出來時跟炮管的起始距離
 
     public ScoreManager scoreManager;
+    public GameLoopManager gameLoopManager;
 
     // Use this for initialization
     void Start()
@@ -40,6 +41,8 @@ public class TurrentManagerScript : MonoBehaviour
         Vector3 shootDirection3D = this.gameObject.transform.right;
         Vector2 shootDirection2D = new Vector2(shootDirection3D.x, shootDirection3D.y);
         bulletScript.InitAndShoot(shootDirection2D);
+
+        gameLoopManager.bullets.Add(bulletScript);
     }
 
     public void PlayRotateAnimation()
@@ -51,13 +54,13 @@ public class TurrentManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayShootAnimation();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            PlayRotateAnimation();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    PlayShootAnimation();
+        //}
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    PlayRotateAnimation();
+        //}
     }
 }

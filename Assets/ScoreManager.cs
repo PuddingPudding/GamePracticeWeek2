@@ -9,6 +9,12 @@ public class ScoreManager : MonoBehaviour
     private int _score = 0;
     private Text _uiText;
 
+    public void Reset()
+    {
+        _score = 0;
+        _uiText.text = _score.ToString();
+    }
+
     public void AddScore(int score)
     {
         _score += score;
